@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caravaggio / Bernini exhibition</title>
+    <style>
+        body {
+           background: linear-gradient(rgba(220, 182, 175, 1), rgba(220, 182, 175, 0.9));
+            font-family: "wulkan display", "Piazzolla", serif;
+            color: rgb(235, 234, 227);
+        }
+        h1, h2 {
+            text-align: center;
+            font-weight: 500;
+            margin: 6vh 0;
+        }
+        hr {
+            border-top: 1px solid rgb(235, 234, 227);
+            margin: 5vh auto;
+            max-width: 500px;
+        }
+        img {
+            display: block;
+            margin: 5vh auto;
+            max-width: 400px;
+        }
+        p {
+            max-width: 500px;
+            text-align: justify;
+            text-justify: inter-cluster;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+        a {
+            line-height: 2.5em;
+            transition: all 200ms ease-in-out;     
+            color: rgb(235, 234, 227);
+            text-decoration: none;  
+             }
+        a:hover {
+            color: rgb(88, 26, 41);
+        }
+        button {
+            display: block;
+            margin: 5vh auto;
+            padding: 10px 20px;
+            background-color: transparent;
+            border: 2px solid rgb(235, 234, 227);
+            border-radius: 20px;
+            color: rgb(235, 234, 227);
+            transition: all 200ms ease-in-out; 
+            font-family: "wulkan display", "Piazzolla", serif;
+            font-weight: 500;
+            font-size: 16px;
+            box-shadow: 2px 2px 8px rgba(235, 234, 227, 0.6);
+        }
+        button:hover {
+            background-color: rgba(88, 26, 41);
+            border: 2px solid rgba(88, 26, 41);
+            cursor: pointer;
+        }
+        .footer {
+            margin: 3vh auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Caravaggio / Bernini</h1>
+    <h2>Early Baroque in Rome at the Rijksmuseum</h2>
+    <hr />
+    <img src="caravaggiobernini.jpg">
+    <hr />
+    <p>The <strong>Caravaggio Bernini | Baroque in Rome</strong> exhibition at Stedelijk Museum showcases a selection of works of the beginning of the Baroque period from masters such as Caravaggio, Bernini, Carracci, Poussin... 
+        <br />
+        Each room is centered on one of the main themes / feelings baroque aimed at raising, named with their Italian words: <em>Meraviglia & Stupore</em>, <em>Vivacità</em>, <em>Visione</em>, <em>Scherzo</em>, <em>Moto & Azione</em>... the works in the sections represent the subjects almost in a didactic way. 
+        <br />
+        The figures of the <em>Vivacità</em>, aliveness, area are portrayed as if about to talk or exhale in a way that makes the spectator feel as if something is about to happen between the artifact and them. 
+        <br />
+        The <em>Moto & Azione</em>, movement and action, depicts physical movement as an expression of the movement of the soul. Here you can find exhanges of glances in paintings that feel almost electric from how much intensity is enclosed therein. Or statues with such a movement that they seem to have landed on their pedestal the moment before your look touched upon them.
+        <br />
+        <a href="https://www.instagram.com/cinziamagnani/" target="_blank">For more art reviews visit my Instagram Page</a>
+    </p>
+    <button>Get your Baroque print</button>
+    <p class="footer">This page was coded by <span class="name">Cinzia Magnani</span></p>
+    <script>
+        function getPrint() {
+            let name = prompt("What's your name?");
+            let email = prompt("What's your email address?");
+            let art = prompt("Do you prefer paintings or sculptures?");
+            let emoji = prompt("What's your favourite emoji?");
+            art = art.toLowerCase();
+            art = art.trim();
+            art = art.replace("painting", "paintings");
+            art = art.replace("sculpture", "sculptures");
+            if (art === "paintings") {
+                alert(`Thank you, ${name}! You'll find your Caravaggio print in your mailbox! ${emoji}`)
+            } else {
+                alert(`Thank you, ${name}! You'll find your Bernini print in your mailbox! ${emoji}`)
+            }
+        }
+        let button = document.querySelector("button");
+        button.addEventListener("click", getPrint);
+    </script>
+</div>
+</body>
+</html>
